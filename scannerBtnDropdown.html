@@ -1,0 +1,96 @@
+<div role="tooltip" class="scanTooltip" style="will-change: transform;" x-placement="bottom-start">
+    <div class="gheaderfooter-MuiPaper-root gheaderfooter-MuiPaper-elevation1 hdr-dropdown gheaderfooter-MuiPaper-rounded"
+        aria-label="Scan" style="max-width:380px;min-width:360px;">
+        <div class="dropdown-menu-container" style="font-size:15px">
+            <div class="heading">
+            </div>
+            <div class="menu-list">
+                <div>
+                    <form id="scanForm">
+                        <ul class="gheaderfooter-MuiList-root parent-list padded gheaderfooter-MuiList-padding">
+                            <li id="searchTextSection"
+                                class="gheaderfooter-MuiListItem-root gheaderfooter-MuiListItem-gutters" aria-level="1"
+                                style="display:block;">
+                                <label id="searchTextHeader" for="searchText"
+                                    style="display:block;text-align:center;font-weight:500;padding-bottom:4px;">What
+                                    research do you want to scan?</label>
+                                <input type="text" id="searchText" name="searchText" placeholder="Type search terms... "
+                                    style="display:block;margin:0 auto;width:250px;padding-left:4px;margin-bottom:10px;">
+                                <input type="checkbox" id="scanThisPageOnly" name="scanThisPageOnly" value="true"
+                                    style="display:none;margin-left:20%;" onchange="changeScanThisPageOnly()">
+                                <label id="scanThisPageOnlyLabel" for="scanOnlyThisPage"
+                                    style="font-weight:normal;display:none;">Scan this page only?</label>
+                                <input type="checkbox" id="useCurrentSearchPage" name="useCurrentSearchPage"
+                                    value="true" style="display:inline-block;margin-left:20%;"
+                                    onchange="changeUseCurrentSearchPage(getNavType())">
+                                <label id="useCurrentSearchPageLabel1" for="useCurrentSearchPage"
+                                    style="font-weight:normal;display:inline-block;">Use
+                                    current search page?</label>
+                                <label id="useCurrentSearchPageLabel2" for="useCurrentSearchPage"
+                                    style="font-weight:normal;display:block;">(Applies
+                                    selected Gartner.com search filters)</label>
+                            </li>
+                            <li id="docCountSection"
+                                class="gheaderfooter-MuiListItem-root gheaderfooter-MuiListItem-gutters" aria-level="1"
+                                style="display:block;">
+                                <label for="docCount"
+                                    style="display:block;text-align:center;font-weight:500;padding-bottom:4px;">Number
+                                    of documents to scan?</label>
+                                <input type="number" id="docCount" name="docCount" min="1" max="50" value="10"
+                                    style="display:block;margin:0 auto;text-align:center;width:40px;margin-bottom:10px;">
+                            </li>
+                            <li id="extractDataSection"
+                                class="gheaderfooter-MuiListItem-root gheaderfooter-MuiListItem-gutters" aria-level="1"
+                                style="display:block;">
+                                <label style="display:block;text-align:center;font-weight:500;padding-bottom:4px;">What
+                                    data do you want to extract?</label>
+
+                                <input type="checkbox" id="extractStatistics" name="extractStatistics" value="true"
+                                    style="display:inline-block;margin-left:20%;" checked>
+                                <label for="extractStatistics"
+                                    style="font-weight:normal;display:inline-block;">Statistics (contains
+                                    %)</label><br>
+                                <input type="checkbox" id="extractFinancials" name="extractFinancials" value="true"
+                                    style="display:inline-block;margin-left:20%;" checked>
+                                <label for="extractFinancials"
+                                    style="font-weight:normal;display:inline-block;">Financials (contains
+                                    $)</label><br>
+                                <input type="checkbox" id="extractReadershipAnalytics" name="extractReadershipAnalytics"
+                                    value="true" style="display:inline-block;margin-left:20%;display:none;" checked>
+                                <label for="extractReadershipAnalytics"
+                                    style="font-weight:normal;display:inline-block;display:none;">Readership
+                                    Analytics</label>
+                                <input type="checkbox" id="extractKeywords" name="extractKeywords"
+                                    style="display:inline-block;margin-left:20%;" value="true"
+                                    onchange="changeExtractKeywords()">
+                                <label for="extractKeywords"
+                                    style="font-weight:normal;display:inline-block;padding-bottom:4px;">Keywords</label>
+                                <input type="text" id="keywordsText" name="keywordsText"
+                                    placeholder="Type keywords separated by commas... "
+                                    style="display:none;margin:0 auto;width:250px;padding-left:4px;margin-bottom:4px;">
+                                <input type="checkbox" id="includingFromLinks" name="includingFromLinks"
+                                    style="display:none;margin-left:25%;" value="false">
+                                <label id="includingFromLinksLabel" for="includingFromLinks"
+                                    style="font-weight:normal;display:none;">Including from
+                                    Links</label>
+                                <input type="checkbox" id="caseSensitive" name="caseSensitive"
+                                    style="display:none;margin-left:25%;" value="false">
+                                <label id="caseSensitiveLabel" for="caseSensitive"
+                                    style="font-weight:normal;display:none;padding-bottom:4px;">CaSe-SeNsItIvE</label>
+                            </li>
+                            <li id="startScanSection"
+                                class="gheaderfooter-MuiListItem-root gheaderfooter-MuiListItem-gutters" aria-level="1"
+                                style="display:block;">
+                                <label style="display:block;text-align:center;font-weight:500;padding-bottom:4px;">NOTE:
+                                    Scanning hundreds of documents in a 24-hour period will lock account out.</label>
+
+                                <input class="startScan" type="submit" value="Start Scan"
+                                    style="display:block;margin:12px auto 10px auto;padding:0px 10px 0px 10px;">
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
